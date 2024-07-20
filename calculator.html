@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="main">
+       <form name="f">
+          <input type="text" name="sam" placeholder="0" id="cal"> <br>
+          <input type="button" value ="1" onclick="f.sam.value+=1">
+          <input type="button" value ="2" onclick="f.sam.value+=2">
+          <input type="button" value ="3" onclick="f.sam.value+=3">
+          <input type="button" value ="+" onclick="add()"> 
+          <br>
+          <input type="button" value ="4" onclick="f.sam.value+=4">
+          <input type="button" value ="5" onclick="f.sam.value+=5">
+          <input type="button" value ="6" onclick="f.sam.value+=6">
+          <input type="button" value ="-" onclick="sub()"> 
+          <br>
+          <input type="button" value ="7" onclick="f.sam.value+=7">
+          <input type="button" value ="8" onclick="f.sam.value+=8">
+          <input type="button" value ="9" onclick="f.sam.value+=9">
+          <input type="button" value ="/" onclick="di()"> 
+          <br>
+          <input type="button" value ="c" onclick="f.sam.value=''">
+          <input type="button" value ="0" onclick="f.sam.value+=0">
+          <input type="button" value ="=" onclick="f.sam.value=eval(f.sam.value)">
+          <input type="button" value ="x" onclick="mul()"> 
+          <br>
+
+       </form>
+    </div>
+
+    <script>
+        function add(){
+             var act=0, b=0;
+             act=f.sam.value;
+             b=act.charAt(act.length-1);
+             if(b=='+' || b=='-' || b=='/' || b=='*'){
+                f.sam.value=act.substring(0,act.length-1);
+                f.sam.value+='+';
+             }
+             else{
+                f.sam.value+='+';
+             }
+        } 
+
+        function sub(){
+             var act=0, b=0;
+             act=f.sam.value;
+             b=act.charAt(act.length-1);
+             if(b=='+' || b=='-' || b=='/' || b=='*'){
+                f.sam.value=act.substring(0,act.length-1);
+                f.sam.value+='-';
+             }
+             else{
+                f.sam.value+='-';
+             }
+        }
+        
+        function di(){
+             var act=0, b=0;
+             act=f.sam.value;
+             b=act.charAt(act.length-1);
+             if(b=='+' || b=='-' || b=='/' || b=='*'){
+                f.sam.value=act.substring(0,act.length-1);
+                f.sam.value+='/';
+             }
+             else{
+                f.sam.value+='/';
+             }
+        } 
+
+
+        function mul(){
+             var act=0, b=0;
+             act=f.sam.value;
+             b=act.charAt(act.length-1);
+             if(b=='+' || b=='-' || b=='/' || b=='*'){
+                f.sam.value=act.substring(0,act.length-1);
+                f.sam.value+='*';
+             }
+             else{
+                f.sam.value+='*';
+             }
+        } 
+
+    </script>
+
+</body>
+</html>
