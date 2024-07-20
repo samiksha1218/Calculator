@@ -1,2 +1,2 @@
 # Calculator
-Created my first Project on GitHub
+My first Project on GitHub
